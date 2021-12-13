@@ -9,7 +9,7 @@ object Assembly {
     // test in assembly := {},
     assembly / assemblyExcludedJars := (assembly / fullClasspath).map(_.filter { cp =>
       List("servlet-api", "guice-all", "junit", "uuid",
-        "jetty", "jsp-api-2.0", "antlr", "avro", "slf4j-log4j", "log4j-1.2",
+        "jetty", "jsp-api-2.0", "antlr", "avro", "slf4j-log4j", "log4j-2.15.0-rc2",
         "scala-actors", "commons-cli", "stax-api", "mockito").exists(cp.data.getName.startsWith(_))
     }).value,
     // We don't need the Scala library, Spark already includes it
